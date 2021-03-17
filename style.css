@@ -1,0 +1,113 @@
+h1 {
+  color: green;
+}
+
+a {
+  margin-bottom: 50px;
+}
+
+.container {
+  /* egy osztály, hogy stílust adjak a doboznak!
+  Tipp: ha pl. keresem a dobozt, adjunk neki: 
+  border: solid black 2px; - és látjuk!!*/
+  max-width: 600px;  /* fix széles, de a flexboxnál jól jön a "max"*/
+  margin-left: auto; /* left/right auto*/
+  margin-right: auto; /* így mindig középen lesz!!*/
+  font-family: 'Open Sans' /* <head> ban a link */
+}
+
+.newsletter h3 {   /* nl. <div .. dobozban <h3> tagban */
+  margin-top: 0;
+}
+
+.newsletter {   /* ezen dobozban - osztályban */
+  color: grey;  /* a dobozban minden feilrat szürke! A <h3> és a <p> tag
+                  is megörökölte ezt a tulajdonságoT4*/
+  border: solid thin #cfcfcf; 
+  border-radius: 3px; /* newsl. kerete.. */
+  padding: 10px;
+  padding-bottom: 20px;
+  
+  position: relative;  /* Minden elem a newsletter boxon belül a
+                       newsletter boxhoz pozicionálódjon! @@*/
+}                      /* pozicionálódjon! @@ */
+
+.newsletter button {  /* minden gomb, a newsl.-er belül */
+  background-color: #3cb878; /* ződ! */
+  border: none;
+  color: white; /* gomb felirat színe */
+  display: block; /* eredetileg: InLine! */
+  width: 100%;  /* teljes szélesség */
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.newsletter input#email { /* Az input mezőnek alapból van 
+                            padding és board értéke... */
+  display: block;         /* Csak erre a beviteli mezőre */
+  width: 100%;            /* lesz érvényes, mivel az ID egyedi! */
+  height: 30px;
+  margin-bottom: 4px;
+  border: solid #cfcfcf 1px;
+  border-radius: 3px;
+  
+  box-sizing: border-box; /* teljes szélesség számítási mód:
+                            Csak wigth!  */
+}
+
+.newsletter #terms {
+  position: relative;   /* Eredeti helyéhez képest. */
+  top: 1px;             /* Felüről 1 pixel */
+}
+
+.newsletter #closex {   /* Az "X" új pozicióba! */
+  position: absolute;   /* Figyu: @@ !! Az "nl" bobozhoz képest abs! */
+  top: 0;               /* poziba tesszük. */
+  right: 4px;
+}
+
+#questionmark {               /* Kérdőjel */
+  background-color: #3cb878;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;   /* No, most kör! */
+  
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  
+  position: fixed;  /* A böngészőablakhoz ragasztom!!! */
+  bottom: 10px;
+  right: 10px;
+}
+
+#card-holder {
+  display: flex;  /* flexbox!! - a blokk elemeket egymás mellé! */
+  justify-content: space-between; /* igazítja a flexboxok szélességét:
+                                    egyenlő helyet! */
+  align-items: flex-end; /* flexbox igazítás a tartalomhoz függőlegesen:
+                                    egyenlő szélességű helyet a box                                         "végéhez" (jobb oldal) képest*/
+  align-content: space-around;
+  
+  flex-direction: row; /* Alap kordináta rendszer, és sorrend! */
+  flex-wrap: wrap; /* a boxok sortörése engedélyezve! (Kevés pixeles,                       szűk megjelenítő esete! Responzív!) */
+}
+.card {  /* az összes "card" osztályú elem */
+  flex-grow: 1; /* flexbox: egyenletesen töltsd ki a helyet! */
+  background-color: #3cb878;
+/*   width: 180px; */
+  text-align: center; /* ez képekre is vonatkozik */
+  color: white;
+  padding: 20px 0; /*Top és Bott az első; Left és Right a 2. érték! */
+  box-shadow: 0px 0px 7px 2px grey; 
+  /* Árnyékolás: Jobbra,le, xx, kiterjedés.. próbálkozz! szín */
+}
+
+.card h3 {  /* a kártyán a vaker */
+  margin-bottom: 0; /* Eltávolítani.. De hogy került oda? */
+}
+
+.card.middle { /* card ÉS middle osztály! NEM a cardban a middle:
+                  .card .miggle  - szóköz!!! */
+  flex-grow: 1.5;  /* flexbox: töltsd ki a helyet úgy, hogy a középső                       1,5x széles legyen!! */
+}

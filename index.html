@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Awesome Landing Page </title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <!-- Középső boboz (mindig!)középre! -->
+  <!-- Főcím vaker h1-gyel:  -->
+  <h1>Awesome Landing Page ***</h1>
+  <a href="about.html">Vaker_Ide</a>
+  <p></p>
+  <!-- 3 kártya / kép -->
+  <div id="card-holder">  <!-- A kártyák befoglaló doboza. 
+                           Egy lesz ebből, ezért ID-t kap-->
+    <div class="card">    <!-- Benne a kártya: 3 lesz, ezért class. -->
+      <img src="kepek/tree.png" alt="">
+     <!-- <img> tag 2 kötelező attributum:
+       src (source) - forrás címe.
+       alt (Szöveges alternatíva, akadálymentesítés): ha a kép nem tud
+       megjelenni, oda kell írni a felolvasó sw.-nek szánt vakert.
+       ITT: Nem tartalmi, csak dekor elem, nincs szöveg. --> 
+      
+      <h3>Plan trees</h3>
+    </div>
+    <div class="card middle">
+      <img src="kepek/deal.png" alt="">
+      <h3>Make friends</h3>
+    </div>
+    <div class="card">
+      <img src="kepek/money.png" alt="">
+      <h3>Profit</h3>
+    </div>
+  </div>
+  <!-- A "newsletter" dobozom !!!! -->
+  <div class="newsletter"> 
+    <h3>Newsletter</h3>
+    <p>Sign up to our newsletter to recive awesome news about fresh air.</p>
+    <form> <!-- Űrlap!!! -->
+      <input id="email" type="text"> <!-- szövegmező ID-val -->
+      <button type="submit"> <!-- gomb és típusa -->
+        Subscribe <!-- felirata -->
+      </button>
+      <!--- Gomb alá box -->
+      <input id="terms" type="checkbox">
+      <!--- és felirat "terms" ID-val -->
+      <label for="terms">I accept the terms and conditions</label>
+      <!--- a felirat (label) az ID-hez -->
+    </form>
+    <div id="closex">  <!--- ID kell, hogy kiválasszam -->
+      x      <!--- Bezáró X <doboz> -->
+    </div>
+  </div>
+  <h3>Következő fejezet</h3>
+  <div id="questionmark">?</div>  <!--- Kérdőjel doboz, ID-vel -->
+</div>
+<!-- partial -->
+  
+</body>
+</html>
